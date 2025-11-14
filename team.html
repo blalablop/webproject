@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Команда | Claude Monet</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/assignment5.css">
+  <link rel="stylesheet" href="css/theme-styles.css">
+</head>
+<body class="team-bg">
+  <!-- Time Display -->
+  <div id="time-display"></div>
+  
+  <!-- Language Switcher -->
+  <select id="language-switcher">
+    <option value="ru">Русский</option>
+    <option value="en">English</option>
+    <option value="kz">Қазақша</option>
+  </select>
+
+  <!-- Theme Toggle -->
+  <button id="theme-toggle">🌙</button>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html" data-translate="brand">Claude Monet</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">Про нас</a></li>
+          <li class="nav-item"><a class="nav-link" href="menu.html">Меню</a></li>
+          <li class="nav-item"><a class="nav-link active" href="team.html">Команда</a></li>
+          <li class="nav-item">
+            <a href="reservation.html" class="btn btn-primary btn-sm ms-lg-3">Забронировать</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main class="container py-5 mt-5">
+    <div class="row mb-5 align-items-center">
+      <div class="col-lg-4 mb-4 mb-lg-0">
+        <img src="images/barinov.jpg" alt="Виктор Баринов" class="img-fluid rounded shadow-lg">
+      </div>
+      <div class="col-lg-8">
+        <div class="chef-info p-4 rounded-3" style="background: rgba(0,0,0,0.6); border: 2px solid rgba(255,255,255,0.1);">
+          <h2 class="fw-bold mb-3 text-white">Виктор Баринов</h2>
+          <p class="lead text-white">Главный шеф-повар ресторана Claude Monet. Гений кухни, мастер вкуса и страстный перфекционист.</p>
+        </div>
+      </div>
+    </div>
+    <h3 class="text-center mb-5 fw-bold">Наша команда</h3>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+      <div class="col">
+        <div class="card h-100">
+          <img src="images/max.jpg" class="card-img-top" alt="Максим Лавров">
+          <div class="card-body">
+            <h5 class="card-title fw-bold" data-translate="chef1-name">Максим Лавров</h5>
+            <p class="card-text" data-translate="chef1-desc">Молодой повар, стремящийся к совершенству и вдохновлённый своим наставником.</p>
+            <div class="rating-container"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="images/nastya.jpg" class="card-img-top" alt="Настя">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Настя</h5>
+            <p class="card-text">Официантка с добрым сердцем и мечтой о любви.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="images/senya.jpg" class="card-img-top" alt="Сеня">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Сеня</h5>
+            <p class="card-text">Весёлый и надёжный су-шеф, душа коллектива.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="images/fedor.jpg" class="card-img-top" alt="Фёдор">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Фёдор</h5>
+            <p class="card-text">Повар с золотыми руками и неиссякаемым чувством юмора.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="bg-dark text-white text-center py-4 mt-auto">
+    <p class="mb-0 small text-secondary">© 2025 Claude Monet | Yessemkhan Batyrkhan</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/assignment5.js"></script>
+  <script src="js/translations.js"></script>
+  <script src="js/theme-lang.js"></script>
+</body>
+</html>

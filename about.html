@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>О нас | Claude Monet</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/assignment5.css">
+  <link rel="stylesheet" href="css/theme-styles.css">
+  <style>
+    .accordion-item-custom {
+      background: rgba(0, 0, 0, 0.6);
+      margin-bottom: 15px;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: .3s;
+    }
+    .accordion-question {
+      padding: 20px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #fff;
+      font-weight: bold;
+      font-size: 18px;
+      transition: .3s;
+    }
+    .accordion-question:hover { background: rgba(255, 69, 0, 0.2); }
+    .accordion-icon {
+      font-size: 24px;
+      color: orangered;
+      font-weight: bold;
+      transition: transform .3s;
+    }
+    .accordion-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .4s ease;
+      background: rgba(0, 0, 0, 0.4);
+    }
+    .accordion-answer-content {
+      padding: 20px;
+      color: #f8f9fa;
+      line-height: 1.6;
+    }
+    .accordion-item-custom.active .accordion-icon {
+      transform: rotate(45deg);
+    }
+  </style>
+</head>
+<body class="about-bg">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Claude Monet</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+          <li class="nav-item"><a class="nav-link active" href="about.html">Про нас</a></li>
+          <li class="nav-item"><a class="nav-link" href="menu.html">Меню</a></li>
+          <li class="nav-item"><a class="nav-link" href="team.html">Команда</a></li>
+          <li class="nav-item">
+            <a href="reservation.html" class="btn btn-primary btn-sm ms-lg-3">Забронировать</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <button id="theme-toggle" title="Сменить тему">🌙</button>
+  <main class="container py-3 py-md-4 py-lg-5 mt-5">
+    <div class="row align-items-center justify-content-center bg-dark bg-opacity-75 rounded-4 shadow-lg p-3 p-md-4 p-lg-5 mb-5">
+      <div class="col-lg-6 mb-3 mb-lg-0">
+        <h2 class="fw-bold mb-3">История ресторана</h2>
+        <p class="lead mb-3">
+          Ресторан "Claude Monet" — изысканное место, где соединились вкус, стиль и страсть к французской кухне. 
+          Здесь трудится команда профессионалов под руководством легендарного шеф-повара Виктора Баринова.
+          Интерьер ресторана пропитан атмосферой уюта, а каждый гость ощущает себя частью искусства кулинарии.
+        </p>
+        <p class="mb-0">
+          Claude Monet — главная действующая локация сериала "Кухня". Элитный ресторан в центре Москвы.
+        </p>
+      </div>
+      <div class="col-lg-6 text-center">
+        <img src="images/about.jpg" alt="Интерьер ресторана Claude Monet" class="img-fluid rounded-4 shadow-lg border border-light border-opacity-25">
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <h2 class="text-center mb-4 fw-bold">Часто задаваемые вопросы</h2>
+        <div id="faq-accordion">
+          <div class="accordion-item-custom">
+            <div class="accordion-question">
+              <span>Как забронировать столик в ресторане?</span>
+              <span class="accordion-icon">+</span>
+            </div>
+            <div class="accordion-answer">
+              <div class="accordion-answer-content">
+                Вы можете забронировать столик через нашу форму бронирования на сайте, позвонив по телефону +7 (495) 123-45-67, или через нашего менеджера в Instagram. Мы рекомендуем бронировать заранее, особенно на выходные дни.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item-custom">
+            <div class="accordion-question">
+              <span>Какая кухня в ресторане Claude Monet?</span>
+              <span class="accordion-icon">+</span>
+            </div>
+            <div class="accordion-answer">
+              <div class="accordion-answer-content">
+                Наш ресторан специализируется на высокой французской кухне с авторскими интерпретациями классических блюд. Все блюда готовятся из свежих продуктов премиум-качества под руководством шеф-повара Виктора Баринова.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item-custom">
+            <div class="accordion-question">
+              <span>Есть ли дресс-код в ресторане?</span>
+              <span class="accordion-icon">+</span>
+            </div>
+            <div class="accordion-answer">
+              <div class="accordion-answer-content">
+                Мы придерживаемся элегантного стиля. Рекомендуем smart casual или деловой стиль одежды. Мы не допускаем посетителей в спортивной одежде, шортах и пляжной обуви.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item-custom">
+            <div class="accordion-question">
+              <span>Можно ли провести банкет или частное мероприятие?</span>
+              <span class="accordion-icon">+</span>
+            </div>
+            <div class="accordion-answer">
+              <div class="accordion-answer-content">
+                Да, мы организуем банкеты, корпоративные мероприятия и частные ужины. Наши менеджеры помогут подобрать индивидуальное меню и оформление зала. Для бронирования свяжитесь с нами заранее.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item-custom">
+            <div class="accordion-question">
+              <span>Какое время работы ресторана?</span>
+              <span class="accordion-icon">+</span>
+            </div>
+            <div class="accordion-answer">
+              <div class="accordion-answer-content">
+                Мы работаем ежедневно с 12:00 до 23:00. Кухня принимает заказы до 22:30. По особым случаям возможно продление работы по предварительной договоренности.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item-custom">
+            <div class="accordion-question">
+              <span>Есть ли вегетарианские и веганские блюда?</span>
+              <span class="accordion-icon">+</span>
+            </div>
+            <div class="accordion-answer">
+              <div class="accordion-answer-content">
+                Конечно! В нашем меню представлены вегетарианские и веганские блюда. Наш шеф-повар также может приготовить индивидуальное блюдо с учетом ваших предпочтений и ограничений в питании.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="bg-dark text-white text-center py-4 mt-auto">
+    <p class="mb-0 small text-secondary">© 2025 Claude Monet | Yessemkhan Batyrkhan</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/translations.js"></script>
+  <script src="js/theme-lang.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

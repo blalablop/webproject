@@ -1,0 +1,217 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #181818;
+    --bg-transparent: rgba(255, 255, 255, 0.75);
+    --primary-color: #ff6347;
+    --shadow-normal: 0 4px 20px rgba(0, 0, 0, 0.1);
+    --card-bg: #ffffff;
+    --navbar-bg: #2c3e50;
+    --input-bg: #ffffff;
+    --input-border: #ff6347;
+}
+
+body.dark-theme {
+    --bg-color: #181818;
+    --text-color: #ffffff;
+    --bg-transparent: rgba(24, 24, 24, 0.75);
+    --card-bg: #2c2c2c;
+    --navbar-bg: #1a1a1a;
+    --input-bg: #2c2c2c;
+    --input-border: #ff6347;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar {
+    background-color: var(--navbar-bg) !important;
+}
+
+.card {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border: 1px solid rgba(128, 128, 128, 0.3);
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+
+#theme-toggle {
+    position: fixed;
+    top: 100px;
+    right: 30px;
+    z-index: 1000;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    border: none;
+    box-shadow: 0 4px 20px rgba(52, 152, 219, 0.5);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    transition: transform 0.3s ease;
+}
+
+#theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+#theme-toggle:active {
+    transform: scale(0.95);
+}
+
+.rating-container {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.star {
+    font-size: 24px;
+    cursor: pointer;
+    color: #ddd;
+    transition: color 0.3s ease;
+}
+
+.star:hover,
+.star.active {
+    color: gold;
+}
+
+#language-switcher {
+    position: fixed;
+    top: 100px;
+    left: 30px;
+    z-index: 1000;
+    padding: 8px;
+    border-radius: 8px;
+    background: var(--bg-transparent);
+    backdrop-filter: blur(8px);
+    border: 2px solid var(--primary-color);
+    color: var(--text-color);
+}
+
+.menu-item {
+    transition: transform 0.3s ease, opacity 0.5s ease;
+}
+
+.menu-item:hover {
+    transform: translateY(-10px);
+}
+
+.time-greeting {
+    position: fixed;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    padding: 10px 20px;
+    background: var(--bg-transparent);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    font-size: 18px;
+    color: var(--text-color);
+    box-shadow: var(--shadow-normal);
+}
+
+.load-more-btn {
+    margin: 30px auto;
+    padding: 12px 24px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.load-more-btn:hover {
+    transform: scale(1.05);
+    background-color: #ff4500;
+}
+
+.load-more-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.form-control:focus {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+}
+
+.code-snippet {
+    background: var(--bg-transparent);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 12px;
+    color: var(--text-color);
+}
+
+.copy-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+footer {
+    background-color: var(--navbar-bg) !important;
+}
+
+input, select, textarea {
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    border-color: var(--input-border);
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+input::placeholder {
+    color: var(--text-color);
+    opacity: 0.6;
+}
+
+.counter {
+    color: var(--primary-color);
+}
+
+.search-input {
+    width: 100%;
+    padding: 12px 20px;
+    border: 2px solid var(--input-border);
+    border-radius: 25px;
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 10px rgba(255, 99, 71, 0.3);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-color);
+}
+
+p {
+    color: var(--text-color);
+}
+
+.card-title {
+    color: var(--text-color);
+}
+
+.card-text {
+    color: var(--text-color);
+    opacity: 0.9;
+}
